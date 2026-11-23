@@ -4,12 +4,12 @@ Unofficial, precompiled LLVM/Clang toolchains for Linux kernel development.
 
 ## About
 
-These builds are compiled on my AMD Ryzen 9 9950X using [tc-build](https://github.com/ClangBuiltLinux/tc-build), with **PGO (Profile-Guided Optimization)** and **ThinLTO** enabled.
+These builds are compiled on my AMD Ryzen 9 9950X using [tc-build](https://github.com/ClangBuiltLinux/tc-build), with **PGO (Profile-Guided Optimization)** , **BOLT (Binary Optimization and Layout Tool)** and **ThinLTO** enabled.
 
 Build command:
 
 ```bash
-./build-llvm.py --pgo kernel-defconfig --lto thin --targets X86 --distribution-profile kernel
+./build-llvm.py --bolt --pgo kernel-defconfig --lto thin --targets X86 --distribution-profile kernel
 ```
 
 The toolchain is primarily built for my personal use with my **linux-hC kernel**. I am simply sharing the same builds I use myself, without making additional changes or providing separate configurations.
